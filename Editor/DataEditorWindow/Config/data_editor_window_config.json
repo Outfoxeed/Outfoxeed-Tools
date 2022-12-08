@@ -1,0 +1,12 @@
+{
+  "dataTypes": [
+    {
+      "typeName": "MyNamespace.MyExampleScriptableObject",
+      "creationPath": "Assets/"
+    },
+    {
+      "typeName": "ScriptableObject",
+      "creationPath": "Assets/"
+    }
+  ]
+}
