@@ -11,34 +11,49 @@ namespace OutFoxeedTools.Editor
             return style;
         }
 
-        private static GUIStyle _titleStyle;
+        private static GUIStyle titleStyle;
         public static GUIStyle TitleStyle
         {
             get
             {
-                if (_titleStyle == null)
+                if (titleStyle == null)
                 {
-                    _titleStyle = new GUIStyle(GUI.skin.label);
-                    _titleStyle.normal.textColor = Color.white;
-                    _titleStyle.fontSize = 20;
+                    titleStyle = new GUIStyle(GUI.skin.label);
+                    titleStyle.normal.textColor = Color.white;
+                    titleStyle.fontSize = 20;
                 }
-                return _titleStyle;
+                return titleStyle;
             }
         }
 
-        private static GUIStyle _subTitleStyle;
+        private static GUIStyle subTitleStyle;
         public static GUIStyle SubTitleStyle
         {
             get
             {
-                if (_subTitleStyle == null)
+                if (subTitleStyle == null)
                 {
-                    _subTitleStyle = new GUIStyle(GUI.skin.label);
-                    _subTitleStyle.normal.textColor = Color.white;
-                    _subTitleStyle.fontSize = 15;
+                    subTitleStyle = new GUIStyle(GUI.skin.label);
+                    subTitleStyle.normal.textColor = Color.white;
+                    subTitleStyle.fontSize = 15;
                 }
-                return _subTitleStyle;
+                return subTitleStyle;
             }
+        }
+
+        private static GUIStyle errorStyle;
+        public static GUIStyle ErrorStyle
+        {
+            get
+            {
+                if (errorStyle == null)
+                {
+                    errorStyle = new GUIStyle(GUI.skin.label);
+                    errorStyle.normal.textColor = Color.red;
+                    errorStyle.fontSize += 2;
+                }
+                return errorStyle;
+            }   
         }
 
         static GUILayoutOption NinetyNineWidthPercent() => GUILayout.Width(Screen.width * 0.99f);
