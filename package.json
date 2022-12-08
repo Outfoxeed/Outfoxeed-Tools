@@ -1,0 +1,22 @@
+{
+  "name": "com.outfoxeed.outfoxeed-tools",
+  "version": "1.0.0",
+  "displayName": "OutFoxeed Tools",
+  "description": "A collection of tools and pre-made scripts",
+  "unity": "2019.1",
+  "unityRelease": "0b5",
+  "dependencies": {},
+ "keywords": [
+    "tool", "tools",
+    "OutFoxeed", "outfoxeed",
+    "out", "foxed", 
+    "hierarchy", "skin", "outliner",
+    "UI", "ui",
+    "scene"
+  ],
+  "author": {
+    "name": "OutFoxeed",
+    "email": "outfoxeed@gmail.com",
+    "url": "https://github.com/Outfoxeed/OutFoxeed-Tools"
+  }
+}

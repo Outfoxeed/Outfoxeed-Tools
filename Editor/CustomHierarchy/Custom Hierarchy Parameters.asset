@@ -1,0 +1,162 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a49bc86a421f10040b646aee65b09af7, type: 3}
+  m_Name: Custom Hierarchy Parameters
+  m_EditorClassIdentifier: 
+  startsWithHierarchyRules:
+  - value: ///
+    skin:
+      normal:
+        textColor: {r: 1, g: 1, b: 1, a: 1}
+        bgColor: {r: 0.7529412, g: 0.22352941, b: 0.16862746, a: 1}
+      selected:
+        textColor: {r: 1, g: 1, b: 1, a: 1}
+        bgColor: {r: 0.90588236, g: 0.29803923, b: 0.23529412, a: 1}
+      alignment: 4
+      upperCase: 0
+      fontStyle: 1
+  - value: //
+    skin:
+      normal:
+        textColor: {r: 1, g: 1, b: 1, a: 1}
+        bgColor: {r: 0.16078432, g: 0.5019608, b: 0.7254902, a: 1}
+      selected:
+        textColor: {r: 1, g: 1, b: 1, a: 1}
+        bgColor: {r: 0.20392157, g: 0.59607846, b: 0.85882354, a: 1}
+      alignment: 4
+      upperCase: 0
+      fontStyle: 1
+  - value: /
+    skin:
+      normal:
+        textColor: {r: 1, g: 1, b: 1, a: 1}
+        bgColor: {r: 0.15294118, g: 0.68235296, b: 0.3764706, a: 1}
+      selected:
+        textColor: {r: 1, g: 1, b: 1, a: 1}
+        bgColor: {r: 0.18039216, g: 0.8, b: 0.44313726, a: 1}
+      alignment: 4
+      upperCase: 1
+      fontStyle: 1
+  - value: '@'
+    skin:
+      normal:
+        textColor: {r: 1, g: 1, b: 1, a: 1}
+        bgColor: {r: 0.5568628, g: 0.26666668, b: 0.6784314, a: 1}
+      selected:
+        textColor: {r: 1, g: 1, b: 1, a: 1}
+        bgColor: {r: 0.60784316, g: 0.34901962, b: 0.7137255, a: 1}
+      alignment: 4
+      upperCase: 1
+      fontStyle: 1
+  - value: '#'
+    skin:
+      normal:
+        textColor: {r: 1, g: 1, b: 1, a: 1}
+        bgColor: {r: 0.49803922, g: 0.54901963, b: 0.5529412, a: 1}
+      selected:
+        textColor: {r: 1, g: 1, b: 1, a: 1}
+        bgColor: {r: 0.58431375, g: 0.64705884, b: 0.6509804, a: 1}
+      alignment: 4
+      upperCase: 1
+      fontStyle: 1
+  - value: $
+    skin:
+      normal:
+        textColor: {r: 1, g: 1, b: 1, a: 1}
+        bgColor: {r: 0.08627451, g: 0.627451, b: 0.52156866, a: 1}
+      selected:
+        textColor: {r: 1, g: 1, b: 1, a: 1}
+        bgColor: {r: 0.101960786, g: 0.7372549, b: 0.6117647, a: 1}
+      alignment: 4
+      upperCase: 1
+      fontStyle: 1
+  - value: "\u20AC"
+    skin:
+      normal:
+        textColor: {r: 1, g: 1, b: 1, a: 1}
+        bgColor: {r: 0.827451, g: 0.32941177, b: 0, a: 1}
+      selected:
+        textColor: {r: 1, g: 1, b: 1, a: 1}
+        bgColor: {r: 0.9019608, g: 0.49411765, b: 0.13333334, a: 1}
+      alignment: 4
+      upperCase: 1
+      fontStyle: 1
+  endsWithHierarchyRules:
+  - value: '>>'
+    skin:
+      normal:
+        textColor: {r: 1, g: 1, b: 1, a: 1}
+        bgColor: {r: 1, g: 1, b: 1, a: 0}
+      selected:
+        textColor: {r: 1, g: 1, b: 1, a: 1}
+        bgColor: {r: 1, g: 1, b: 1, a: 0}
+      alignment: 5
+      upperCase: 0
+      fontStyle: 2
+  containsHierarchyRules:
+  - value: Player
+    skin:
+      normal:
+        textColor: {r: 0, g: 0.5921569, b: 0.9019608, a: 1}
+        bgColor: {r: 0, g: 0, b: 0, a: 0}
+      selected:
+        textColor: {r: 0, g: 0.5921569, b: 0.9019608, a: 1}
+        bgColor: {r: 0, g: 0, b: 0, a: 0}
+      alignment: 3
+      upperCase: 0
+      fontStyle: 0
+  componentHierarchyRules:
+  - value: Collider2D
+    skin:
+      normal:
+        textColor: {r: 0, g: 0, b: 0, a: 1}
+        bgColor: {r: 0.26666668, g: 0.7411765, b: 0.19607843, a: 1}
+      selected:
+        textColor: {r: 0, g: 0, b: 0, a: 1}
+        bgColor: {r: 0.29803923, g: 0.81960785, b: 0.21568628, a: 1}
+      alignment: 0
+      upperCase: 0
+      fontStyle: 0
+  - value: Canvas
+    skin:
+      normal:
+        textColor: {r: 0.21568628, g: 0.21568628, b: 0.21568628, a: 1}
+        bgColor: {r: 0.7411765, g: 0.7647059, b: 0.78039217, a: 1}
+      selected:
+        textColor: {r: 0.21698111, g: 0.21698111, b: 0.21698111, a: 1}
+        bgColor: {r: 0.9254902, g: 0.9411765, b: 0.94509804, a: 1}
+      alignment: 0
+      upperCase: 0
+      fontStyle: 0
+  - value: Camera
+    skin:
+      normal:
+        textColor: {r: 0.50687975, g: 1, b: 0.47450984, a: 1}
+        bgColor: {r: 0, g: 0, b: 0, a: 0}
+      selected:
+        textColor: {r: 0.32714352, g: 0.990566, b: 0.28502133, a: 1}
+        bgColor: {r: 0.009433985, g: 0.009433985, b: 0.009433985, a: 0}
+      alignment: 0
+      upperCase: 0
+      fontStyle: 0
+  tagHierarchyRules:
+  - value: EditorOnly
+    skin:
+      normal:
+        textColor: {r: 0.4339623, g: 0.4339623, b: 0.4339623, a: 1}
+        bgColor: {r: 0, g: 0, b: 0, a: 0}
+      selected:
+        textColor: {r: 0.122641504, g: 0.122641504, b: 0.122641504, a: 1}
+        bgColor: {r: 0, g: 0, b: 0, a: 0}
+      alignment: 3
+      upperCase: 0
+      fontStyle: 0
