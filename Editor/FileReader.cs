@@ -80,7 +80,7 @@ namespace OutFoxeedTools.Editor
         {
             using (StreamWriter writer = new StreamWriter(jsonPath))
             {
-                string json = JsonConvert.SerializeObject(data);
+                string json = JsonConvert.SerializeObject(data, Formatting.Indented);
                 writer.Write(json);
                 writer.Close();
             }

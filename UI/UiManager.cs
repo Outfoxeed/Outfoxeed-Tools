@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using OutFoxeedTools.Attributes;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace OutFoxeedTools.UI
 {
@@ -20,7 +19,7 @@ namespace OutFoxeedTools.UI
             }
         }
 
-        private bool mainMenu;
+        [SerializeField] private UiType startUiType;
         private Dictionary<UiType, UiMenu> uiPrefabs;
 
         public enum UiType
@@ -30,8 +29,8 @@ namespace OutFoxeedTools.UI
             MainMenu,
             Pause,
             Options,
-            GameOverScreen,
-            WinScreen
+            LooseScreen,
+            VictoryScreen,
         };
 
         [SerializeField, ReadOnly] private UiType currentUiType;
@@ -48,8 +47,7 @@ namespace OutFoxeedTools.UI
                 uiPrefabs.Add(uiInfo.type, uiInfo.prefab);
             }
 
-            mainMenu = SceneManager.GetActiveScene().buildIndex == 0;
-            OpenUiOfType(mainMenu ? UiType.MainMenu : UiType.Game);
+            OpenUiOfType(startUiType);
         }
 
         public void OpenUiOfType(UiType type)
@@ -83,17 +81,13 @@ namespace OutFoxeedTools.UI
 
             switch (currentUiType)
             {
-                case UiType.None:
-                    break;
-                case UiType.Game:
-                    break;
-                case UiType.MainMenu:
-                    break;
                 case UiType.Pause:
                     OpenUiOfType(UiType.Game);
                     break;
                 case UiType.Options:
                     OpenUiOfType(lastUiType);
+                    break;
+                default:
                     break;
             }
         }

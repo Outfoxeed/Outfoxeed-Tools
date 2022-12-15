@@ -1,44 +1,51 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace OutFoxeedTools.MonoBehaviourBase
 {
     public abstract class GameManagerBase<T> : SingletonBase<T> where T : MonoBehaviour
     {
-        // Cleaner reference to Camera.main
-        public Camera MainCam { get; protected set; }
-
         // Pause system
-        private bool paused;
-        public bool IsPaused => paused;
-        private float wantedTimeScale;
-        public void TogglePause() => SetPause(!paused);
-        public void SetPause(bool pause)
+        #region Pause
+        public bool Paused { get; protected set; }
+        protected float wantedTimeScale = 1f;
+        public void TogglePause() => TrySetPause(!Paused);
+        public void TrySetPause(bool pause)
         {
-            if (paused == pause)
+            if (Paused == pause)
                 return;
-            paused = pause;
+            SetPause(pause);
+        }
+        private void SetPause(bool pause)
+        {
+            Paused = pause;
 
             // Time scale gestion
             if (pause) wantedTimeScale = Time.timeScale;
-            Time.timeScale = paused ? 0f : wantedTimeScale;
+            Time.timeScale = Paused ? 0f : wantedTimeScale;
 
             OnSetPaused();
+            OnPauseUpdated?.Invoke(Paused);
         }
         protected virtual void OnSetPaused()
         {
         }
+        public event Action<bool> OnPauseUpdated;
+        #endregion
+        // // /
 
         // Game State
+        #region GameStates
         public enum GameState
         {
+            Starting,
             Game,
-            Pause,
-            End
+            Finishing,
+            Finished,
         };
 
-        private GameState lastGameState;
-        private GameState currentGameState = GameState.Game;
-
+        public GameState LastGameState { get; protected set; }
+        private GameState currentGameState = GameState.Starting;
         public GameState CurrentGameState
         {
             get => currentGameState;
@@ -46,10 +53,24 @@ namespace OutFoxeedTools.MonoBehaviourBase
             {
                 if (currentGameState == value)
                     return;
-                lastGameState = currentGameState;
+                LastGameState = currentGameState;
                 currentGameState = value;
+                
+                OnGameStateSet();
+                OnGameStateChanged?.Invoke(currentGameState);
             }
         }
+        protected virtual void OnGameStateSet()
+        {
+            
+        }
+        public event Action<GameState> OnGameStateChanged;
+        #endregion
+        // // //
+        
+        // Cleaner reference to Camera.main
+        public Camera MainCam { get; protected set; }
+
 
         protected override void Awake()
         {
@@ -57,6 +78,7 @@ namespace OutFoxeedTools.MonoBehaviourBase
 
             MainCam = Camera.main;
             wantedTimeScale = 1f;
+            SetPause(false);
         }
     }
 }
