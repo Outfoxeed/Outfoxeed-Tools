@@ -1,26 +1,66 @@
-# OutFoxeed-Tools
+# 🦊 Outfoxeed Tools 🦊
 
-A collection of tools enhancing Unity's interface and increase the speed of common manipulations: Hierarchy Outliner, Toolbar buttons...
+This repository is a collection of tools and pre-made scripts imported or made for this repository for Unity:
 
-A collection of pre-made scripts to facilitate the creation of games: GameManager base, UI Manager...
+- Tools enhancing Unity's interface and increase the speed of common manipulations: 
+  - [Hierarchy Outliner](#-importing)
+  - [Data Editor Window](#-data-editor-window)
+  - [Toolbar buttons](#-toolbar-buttons)
+  - [SerializeReference ContextualMenu](#-serializereference-contextualmenu)
+- A collection of pre-made scripts to facilitate the creation of games:
+  - [UI base](#-ui-base)
+  - [Custom Attributes](#-custom-attributes)
+  - GameManager base
 
+---
+## 🟠 IMPORTING
+Import as a package in the Unity Package Manager with the git link 
+(cf [link to it from github directly](https://docs.unity3d.com/Manual/upm-ui-giturl.html))
+`https://github.com/outfoxeed/outfoxeed-tools.git`
 
-### Hierarchy Outliner
+---
+## 🟠 TOOLS
+### 🟡 Hierarchy Outliner
+Tool overriding the drawing of the GameObjects in the hierarchy of Unity. 
+Change the colors, alignment, font style and more depending on the name of the object, its components and its tags.
+
+Easily configurable through an EditorWindow.
 
 ![Imgur](https://imgur.com/ZIqtRhG.png)
 ![Imgur](https://imgur.com/SJTZlvJ.png)
 
-### Data Editor Window
+### 🟡 Data Editor Window
+Editor Window able to query all ScriptableObjects of given types in the project to edit game's data more easily.
+It is also able to delete and add ScriptableObjects of the same given types.
+
+The types of ScriptableObjects to show and the path where to create new instances are easily editable in another EditorWindow openable from the 'Config' button in the DataEditorWindow.
 
 ![Imgur](https://imgur.com/0c0cdTX.png)
 ![Imgur](https://imgur.com/1atLGQA.png)
 
-## Importing
+### 🟡 Toolbar Buttons
+Thanks to [Unity Toolbar Extender](https://github.com/marijnz/unity-toolbar-extender), we can easily add labels and buttons in the Unity toolbar. 
+This package adds automatically one button for each scene in the build settings so you can switch of scene easily. 
 
-To use this in your Unity project import it from Unity Package Manager. You can [download it and import it from your hard drive](https://docs.unity3d.com/Manual/upm-ui-local.html), or [link to it from github directly](https://docs.unity3d.com/Manual/upm-ui-giturl.html).
+---
+## 🟠 PRE-MADE SCRIPTS
+### 🟡 UI Base
+UI Manager MonoBehaviour storing different pages of the UI by enums and handling the spawning and destruction of the UI menus
 
+UIMenu script used by the UIManager representing a page in the ui and with operations as a page switch/leave
+### 🟡 Custom Attributes
+- ReadOnly attribute (makes a field non editable in the Unity inspector)
+- Label attribute (changes the label of a field in the Unity inspector)
 
-## Dependencies
-[Unity Toolbar Extender](https://github.com/marijnz/unity-toolbar-extender) by [Marijn *marijnz* Zwemmer](https://github.com/marijnz) --> Buttons in the toolbars are using this repository
+---
+## 🟠 DEPENDENCIES
+[Unity Toolbar Extender](https://github.com/marijnz/unity-toolbar-extender) by [Marijn *marijnz* Zwemmer](https://github.com/marijnz) 
+--> Buttons in the toolbars are made using this repository (unity-toolbar-extender is a subtree of this repository)
 
-[Smart Inspector](https://github.com/neon-age/Smart-Inspector) by [Neonage](https://github.com/neon-age) --> smart-inspector is a subtree of this repository
+[Smart Inspector](https://github.com/neon-age/Smart-Inspector) by [Neonage](https://github.com/neon-age) 
+--> Because it's cool (smart-inspector is a subtree of this repository)
+
+---
+## 🟠 FUTURE
+TODO:
+- Import package or add a dependency to a package serializing System.Type and remake HierarchyOutlinerConfigWindow and DataEditorConfigWindow with it.
