@@ -1,6 +1,6 @@
-﻿using OutFoxeedTools.Editor;
+﻿using OutfoxeedTools.Editor;
 
-namespace OutFoxeedTools.CustomHierarchy
+namespace OutfoxeedTools.CustomHierarchy
 {
     [System.Serializable]
     public class HierarchyRule

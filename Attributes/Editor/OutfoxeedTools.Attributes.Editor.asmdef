@@ -1,10 +1,12 @@
 {
-    "name": "OutFoxeed.OutFoxeedTools",
-    "rootNamespace": "",
+    "name": "OutfoxeedTools.Attributes.Editor",
+    "rootNamespace": "OutfoxeedTools.Attributes.Editor",
     "references": [
         "GUID:1529bef6b9d168f4fb8c41e5348a0819"
     ],
-    "includePlatforms": [],
+    "includePlatforms": [
+        "Editor"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,

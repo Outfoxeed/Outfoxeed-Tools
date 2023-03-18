@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace OutFoxeedTools.MonoBehaviourBase
+namespace OutfoxeedTools.MonoBehaviourBase
 {
     public class SingletonBase<T> : MonoBehaviour where T : MonoBehaviour
     {

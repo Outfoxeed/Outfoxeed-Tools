@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace OutFoxeedTools.UI.UiMenus
+namespace OutfoxeedTools.UI.UiMenus
 {
     public class MainMenuBase : UiMenu
     {

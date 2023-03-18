@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace OutFoxeedTools.Attributes
+namespace OutfoxeedTools.Attributes
 {
     public class LabelAttribute : PropertyAttribute
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace OutFoxeedTools.MonoBehaviourBase
+namespace OutfoxeedTools.MonoBehaviourBase
 {
     public abstract class GameManagerBase<T> : SingletonBase<T> where T : MonoBehaviour
     {

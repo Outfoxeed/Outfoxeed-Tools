@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace OutFoxeedTools.UI
+namespace OutfoxeedTools.UI
 {
     public class UiMenu : MonoBehaviour
     {

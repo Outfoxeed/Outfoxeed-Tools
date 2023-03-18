@@ -3,7 +3,7 @@ using System.IO;
 using Newtonsoft.Json;
 using UnityEditor;
 
-namespace OutFoxeedTools.Editor
+namespace OutfoxeedTools.Editor
 {
     public static class FileReader
     {

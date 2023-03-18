@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityToolbarExtender;
 
 // ReSharper disable once CheckNamespace
-namespace OutFoxeedTools.Editor
+namespace OutfoxeedTools.Editor
 {
     [InitializeOnLoad]
     public class ToolbarButtons

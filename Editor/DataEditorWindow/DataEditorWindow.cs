@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using OutFoxeedTools.Editor;
+using OutfoxeedTools.Editor;
 using PlasticGui.WorkspaceWindow.Topbar;
 using UnityEditor;
 using UnityEditor.Callbacks;

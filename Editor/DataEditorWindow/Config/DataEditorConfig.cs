@@ -1,5 +1,5 @@
 ﻿using System;
-using OutFoxeedTools.Editor;
+using OutfoxeedTools.Editor;
 using UnityEditor;
 using UnityEngine;
 

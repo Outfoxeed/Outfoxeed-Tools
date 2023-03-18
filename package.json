@@ -1,8 +1,8 @@
 {
   "name": "com.outfoxeed.outfoxeed-tools",
   "version": "1.0.0",
-  "displayName": "OutFoxeed Tools",
-  "description": "A collection of tools and pre-made scripts",
+  "displayName": "Outfoxeed Tools",
+  "description": "A collection of tools and pre-made scripts for Unity",
   "unity": "2019.1",
   "unityRelease": "0b5",
   "dependencies": {},
@@ -11,12 +11,15 @@
     "OutFoxeed", "outfoxeed",
     "out", "foxed", 
     "hierarchy", "skin", "outliner",
+    "data", "data editor window",
+    "scriptable object", "scriptable",
+    "variable", "variable reference",
     "UI", "ui",
     "scene"
   ],
   "author": {
-    "name": "OutFoxeed",
+    "name": "Outfoxeed",
     "email": "outfoxeed@gmail.com",
-    "url": "https://github.com/Outfoxeed/OutFoxeed-Tools"
+    "url": "https://github.com/Outfoxeed/Outfoxeed-Tools"
   }
 }

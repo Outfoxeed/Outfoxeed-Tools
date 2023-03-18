@@ -1,8 +1,8 @@
-using OutFoxeedTools.Editor;
+using OutfoxeedTools.Editor;
 using UnityEditor;
 using UnityEngine;
 
-namespace OutFoxeedTools.MeshTools.Editor
+namespace OutfoxeedTools.MeshTools.Editor
 {
     public class MeshToolsWindow : EditorWindow
     {

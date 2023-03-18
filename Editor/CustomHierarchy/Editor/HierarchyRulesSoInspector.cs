@@ -1,7 +1,7 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
-namespace OutFoxeedTools.CustomHierarchy.Editor
+namespace OutfoxeedTools.CustomHierarchy.Editor
 {
     [CustomEditor(typeof(HierarchyRulesSO))]
     public class HierarchyRulesSoInspector : UnityEditor.Editor

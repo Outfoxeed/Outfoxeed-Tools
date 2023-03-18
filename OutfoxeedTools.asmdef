@@ -1,0 +1,16 @@
+{
+    "name": "OutfoxeedTools",
+    "rootNamespace": "OutfoxeedTools",
+    "references": [
+        "GUID:1529bef6b9d168f4fb8c41e5348a0819"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

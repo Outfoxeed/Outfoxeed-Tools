@@ -1,7 +1,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace OutFoxeedTools.Editor
+namespace OutfoxeedTools.Editor
 {
     public static class WindowUtility
     {

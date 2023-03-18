@@ -1,4 +1,4 @@
-﻿namespace OutFoxeedTools.Editor
+﻿namespace OutfoxeedTools.Editor
 {
     public static class TypeUtilities
     {
