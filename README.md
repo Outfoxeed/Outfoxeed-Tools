@@ -42,6 +42,15 @@ The types of ScriptableObjects to show and the path where to create new instance
 Thanks to [Unity Toolbar Extender](https://github.com/marijnz/unity-toolbar-extender), we can easily add labels and buttons in the Unity toolbar. 
 This package adds automatically one button for each scene in the build settings so you can switch of scene easily. 
 
+### 🟡 SerializeReference ContextualMenu
+Using SerializeReference fields we can Serialize in the Inspector an abstract class.
+But we need more stuff to just create an instance of a concrete class and assign it to the property.
+
+This package contains the ability to recognize SerializeReference fields and to give you the power to 
+set the concrete type of the field instance by right clicking on it
+
+![SerializeReference ContextualMenu Image](Documentation/SerializeReference_ContextualMenu.gif)
+
 ---
 ## 🟠 PRE-MADE SCRIPTS
 ### 🟡 UI Base
