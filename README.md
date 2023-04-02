@@ -66,9 +66,6 @@ UIMenu script used by the UIManager representing a page in the ui and with opera
 [Unity Toolbar Extender](https://github.com/marijnz/unity-toolbar-extender) by [Marijn *marijnz* Zwemmer](https://github.com/marijnz) 
 --> Buttons in the toolbars are made using this repository (unity-toolbar-extender is a subtree of this repository)
 
-[Smart Inspector](https://github.com/neon-age/Smart-Inspector) by [Neonage](https://github.com/neon-age) 
---> Because it's cool (smart-inspector is a subtree of this repository)
-
 ---
 ## 🟠 FUTURE
 TODO:
