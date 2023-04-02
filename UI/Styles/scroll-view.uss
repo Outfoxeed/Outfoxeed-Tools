@@ -1,0 +1,44 @@
+﻿
+
+/* When compact scroll is enabled, we always add right margin to inspector containers */
+.root-scroll .unity-inspector-element__custom-inspector-container {
+    margin-right: 3;
+}
+
+.unity-inspector-root-scrollview > #unity-content-viewport {
+    margin-right: 0;
+}
+
+Scroller {
+    border-width: 0;
+}
+Scroller RepeatButton {
+    display: none;
+}
+Scroller.unity-scroller--vertical > Slider.unity-scroller__slider {
+    margin-top: 6;
+    margin-bottom: 6;
+}
+
+.unity-scroller--vertical {
+    width: 6;
+    right: 6;
+}
+.unity-scroller #unity-dragger {
+    margin-left: 1;
+    border-radius: 4.5;
+    width: 9;
+}
+.unity-scroller:disabled {
+    opacity: 0;
+}
+.unity-scroller:enabled {
+    opacity: 0;
+}
+.unity-scroller:hover {
+    opacity: 1;
+}
+
+#RowContainer {
+    flex-grow: 1;
+}

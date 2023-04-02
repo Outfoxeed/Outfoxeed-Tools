@@ -1,0 +1,23 @@
+{
+  "name": "com.av.smart-inspector",
+  "version": "0.8.0-pre.1",
+  "displayName": "Smart Inspector",
+  "description": "Fluent re-take on Unity Inspector UX. \nPacked with QoL improvements - fully customizable.",
+  "keywords": [
+    "smart",
+    "inspector",
+    "components",
+    "editor",
+    "drawers",
+    "tools",
+    "utility",
+    "extensions"
+  ],
+  "author": {
+    "name": "Alternative Visual",
+    "email": "alexander.neonage@gmail.com",
+    "url": "https://github.com/neon-age"
+  },
+  "unity": "2019.3",
+  "type": "tool"
+}
