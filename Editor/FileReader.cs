@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.IO;
-using Newtonsoft.Json;
+using Unity.Plastic.Newtonsoft.Json;
 using UnityEditor;
 
 namespace OutfoxeedTools.Editor

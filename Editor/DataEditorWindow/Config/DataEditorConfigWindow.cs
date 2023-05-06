@@ -1,6 +1,4 @@
-﻿using System;
-using Mono.Cecil;
-using OutfoxeedTools.Editor;
+﻿using OutfoxeedTools.Editor;
 using UnityEditor;
 using UnityEngine;
 

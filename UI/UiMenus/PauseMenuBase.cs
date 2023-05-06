@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-namespace OutfoxeedTools.UI.UiMenus
+﻿namespace OutfoxeedTools.UI.UiMenus
 {
     public class PauseMenuBase : UiMenu
     {
