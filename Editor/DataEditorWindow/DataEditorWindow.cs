@@ -53,7 +53,7 @@ namespace Editor.DataEditorWindow
         #endregion
 
         private bool initialized;
-        protected Dictionary<System.Type, string> typesAndCreationPath;
+        protected static Dictionary<System.Type, string> typesAndCreationPath;
         protected static System.Type[] scriptableObjectsTypes;
         private System.Type selectedType;
 
@@ -70,17 +70,9 @@ namespace Editor.DataEditorWindow
         // Style
         private GUIStyle style;
 
-        private void Awake() => Init();
-        protected virtual void OnEnable() => Init();
-        private void OnDisable() => initialized = false;
-        private void OnDestroy() => initialized = false;
-
-        protected void Init()
+        [InitializeOnLoadMethod]
+        static void Init()
         {
-            if (initialized)
-                return;
-            initialized = true;
-
             // Load JSON Data
             if (!DataEditorConfig.LoadConfigData(out DataEditorConfig config))
                 return;
@@ -113,8 +105,7 @@ namespace Editor.DataEditorWindow
             // Set types
             scriptableObjectsTypes = typesAndCreationPath.Keys.ToArray();
         }
-
-
+        
         private void OnGUI()
         {
             InitializeGuiVars();
@@ -295,7 +286,6 @@ namespace Editor.DataEditorWindow
         private void Reset()
         {
             initialized = false;
-            OnEnable();
             if (selectedType != null)
                 itemInfos = new DataEditorItemInfos<ScriptableObject>(selectedType, itemInfos.SelectedObject);
         }
