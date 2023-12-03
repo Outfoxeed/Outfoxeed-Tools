@@ -4,6 +4,7 @@ This repository is a collection of tools and pre-made scripts imported or made f
 
 - Tools enhancing Unity's interface and increase the speed of common manipulations: 
   - [Hierarchy Outliner](#-importing)
+  - [GD Window](#-gd-window)
   - [Data Editor Window](#-data-editor-window)
   - [Toolbar buttons](#-toolbar-buttons)
   - [SerializeReference ContextualMenu](#-serializereference-contextualmenu)
@@ -18,6 +19,10 @@ Import as a package in the Unity Package Manager with the git link
 (cf [link to it from github directly](https://docs.unity3d.com/Manual/upm-ui-giturl.html))
 `https://github.com/outfoxeed/outfoxeed-tools.git`
 
+OR
+
+Download the zip file from the github page and unzip it in your assets folder.
+
 ---
 ## 🟠 TOOLS
 ### 🟡 Hierarchy Outliner
@@ -28,6 +33,17 @@ Easily configurable through an EditorWindow.
 
 ![Imgur](https://imgur.com/ZIqtRhG.png)
 ![Imgur](https://imgur.com/SJTZlvJ.png)
+
+### 🟡 GD Window
+Window in which all assets labeled with 'GD' are displayed. Allowing easy access to all the ScriptableObjects a Game Designer would want to edit. 
+
+Clicking on one of the button in the window shows the asset in the inspector.
+
+![GD Window Example](Documentation/GDWindow_Window.png)
+
+#### Labeled Asset Example
+![Asset Labeled to be visible in GD Window example](Documentation/GDWindow_LabeledAssetExample.png)
+
 
 ### 🟡 Data Editor Window
 Editor Window able to query all ScriptableObjects of given types in the project to edit game's data more easily.
