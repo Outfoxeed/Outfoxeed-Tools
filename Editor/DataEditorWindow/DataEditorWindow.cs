@@ -6,7 +6,7 @@ using UnityEditor;
 using UnityEditor.Callbacks;
 using UnityEngine;
 
-namespace Editor.DataEditorWindow
+namespace OutfoxeedTools.Editor.DataEditorWindow
 {
     [ExecuteInEditMode]
     public class DataEditorWindow : EditorWindow, IHasCustomMenu

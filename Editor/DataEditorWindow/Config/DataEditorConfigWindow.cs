@@ -3,7 +3,7 @@ using UnityEditor;
 using UnityEngine;
 
 // ReSharper disable once CheckNamespace
-namespace Editor.DataEditorWindow
+namespace OutfoxeedTools.Editor.DataEditorWindow
 {
     public class DataEditorConfigWindow : EditorWindow
     {
