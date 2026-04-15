@@ -35,6 +35,115 @@ namespace UnityToolbarExtender
 		public static Action OnToolbarGUI;
 		public static Action OnToolbarGUILeft;
 		public static Action OnToolbarGUIRight;
+
+#if UNITY_6000_3_OR_NEWER
+		// bypass Unity 6.3+ warnings about unsupported elements by using a weirder callback reflection method
+		// see https://github.com/marijnz/unity-toolbar-extender/issues/39 for discussion
+	
+		private static int setupAttempts;
+		private const int MaxSetupAttempts = 200;
+
+		static ToolbarCallback()
+		{
+			EditorApplication.update -= Initialize;
+			EditorApplication.update += Initialize;
+		}
+
+		private static void Initialize()
+		{
+			setupAttempts++;
+
+			Type mainToolbarWindowType = typeof(UnityEditor.Editor).Assembly.GetType("UnityEditor.MainToolbarWindow");
+
+			if (mainToolbarWindowType == null)
+			{
+				EditorApplication.update -= Initialize;
+
+				return;
+			}
+
+			UnityEngine.Object[] toolbars = Resources.FindObjectsOfTypeAll(mainToolbarWindowType);
+
+			if (toolbars.Length == 0)
+			{
+				if (setupAttempts > MaxSetupAttempts)
+				{
+						Debug.LogWarning("[CustomToolbar] Could not find MainToolbarWindow instance after multiple attempts. Aborting.");
+						EditorApplication.update -= Initialize;
+				}
+
+				return;
+			}
+
+			var toolbarWindow = (EditorWindow)toolbars[0];
+			VisualElement root = toolbarWindow.rootVisualElement;
+
+			if (root == null)
+			{
+				EditorApplication.update -= Initialize;
+
+				return;
+			}
+
+			VisualElement middleContainer = root.Q(className: "unity-overlay-container__middle-container");
+
+			if (middleContainer == null)
+			{
+				if (setupAttempts > MaxSetupAttempts)
+				{
+						Debug.LogWarning("[CustomToolbar] Found MainToolbarWindow, but its middle-container is not ready. Aborting.");
+						EditorApplication.update -= Initialize;
+				}
+
+				return;
+			}
+
+			VisualElement parentContainer = middleContainer.parent;
+
+			if (parentContainer == null)
+			{
+				EditorApplication.update -= Initialize;
+
+				return;
+			}
+
+			var leftDock = new VisualElement
+			{
+						name = "CustomToolbarLeft",
+						style =
+						{
+									flexGrow = 1,
+									flexDirection = FlexDirection.Row,
+									flexBasis = 0,
+									justifyContent = Justify.FlexEnd,
+									alignItems = Align.Center
+						}
+			};
+
+			var rightDock = new VisualElement
+			{
+						name = "CustomToolbarRight",
+						style =
+						{
+									flexGrow = 1,
+									flexDirection = FlexDirection.Row,
+									flexBasis = 0,
+									justifyContent = Justify.FlexStart,
+									alignItems = Align.Center
+						}
+			};
+
+			parentContainer.Insert(parentContainer.IndexOf(middleContainer), leftDock);
+			parentContainer.Insert(parentContainer.IndexOf(middleContainer) + 1, rightDock);
+
+			leftDock.Add(new IMGUIContainer(static () => OnToolbarGUILeft?.Invoke()));
+			rightDock.Add(new IMGUIContainer(static () => OnToolbarGUIRight?.Invoke()));
+
+			EditorApplication.update -= Initialize;
+		}
+
+		// end Unity 6.3 workaround
+#else		
 		
 		static ToolbarCallback()
 		{
@@ -107,5 +216,7 @@ namespace UnityToolbarExtender
 			var handler = OnToolbarGUI;
 			if (handler != null) handler();
 		}
+
+#endif
 	}
 }
