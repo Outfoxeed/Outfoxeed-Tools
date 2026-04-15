@@ -5,7 +5,7 @@ namespace OutfoxeedTools
     public class SingletonBase<T> : MonoBehaviour where T : MonoBehaviour
     {
         private static T _instance;
-        public static T instance
+        public static T Instance
         {
             get
             {
@@ -19,13 +19,13 @@ namespace OutfoxeedTools
 
         protected virtual void Awake()
         {
-            if (_instance == null)
-                _instance = this as T;
-            else
+            if (_instance != null && _instance != this)
             {
-                Destroy(this);
+                Destroy(gameObject);
                 return;
             }
+            
+            _instance = this as T;
         }
     }
 }
