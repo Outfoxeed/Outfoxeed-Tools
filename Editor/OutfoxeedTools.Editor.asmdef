@@ -2,7 +2,8 @@
     "name": "OutfoxeedTools.Editor",
     "rootNamespace": "OutfoxeedTools.Editor",
     "references": [
-        "GUID:0a0471484b079be408cb3a0d7fe94736"
+        "GUID:0a0471484b079be408cb3a0d7fe94736",
+        "GUID:10a62f88beb5a30458c8afc1213a2f34"
     ],
     "includePlatforms": [
         "Editor"

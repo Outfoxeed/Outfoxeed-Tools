@@ -1,6 +1,6 @@
 {
-    "name": "OutfoxeedTools.Attributes",
-    "rootNamespace": "OutfoxeedTools.Attributes",
+    "name": "OutfoxeedTools.Runtime",
+    "rootNamespace": "OutfoxeedTools",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
