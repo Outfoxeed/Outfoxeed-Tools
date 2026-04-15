@@ -3,11 +3,11 @@
 This repository is a collection of tools and pre-made scripts imported or made for this repository for Unity:
 
 - Tools enhancing Unity's interface and increase the speed of common manipulations: 
-  - [Hierarchy Outliner](#-importing)
-  - [GD Window](#-gd-window)
-  - [Data Editor Window](#-data-editor-window)
-  - [Toolbar buttons](#-toolbar-buttons)
-  - [SerializeReference ContextualMenu](#-serializereference-contextualmenu)
+  - [Hierarchy Outliner](#hierarchy-outliner)
+  - [GD Window](#gd-window)
+  - [Data Editor Window](#data-editor-window)
+  - [Toolbar buttons](#toolbar-buttons)
+  - [SerializeReference ContextualMenu](#serializereference-contextualmenu)
 - A collection of pre-made scripts to facilitate the creation of games:
   - [UI base](#-ui-base)
   - [Custom Attributes](#-custom-attributes)
@@ -25,47 +25,56 @@ Download the zip file from the github page and unzip it in your assets folder.
 
 ---
 ## 🟠 TOOLS
-### 🟡 Hierarchy Outliner
+<details id="hierarchy-outliner">
+<summary>🟡 Hierarchy Outliner</summary>
 Tool overriding the drawing of the GameObjects in the hierarchy of Unity. 
 Change the colors, alignment, font style and more depending on the name of the object, its components and its tags.
 
 Easily configurable through an EditorWindow.
 
-![Imgur](https://imgur.com/ZIqtRhG.png)
-![Imgur](https://imgur.com/SJTZlvJ.png)
+<img src="Documentation~/HierarchyOutliner_Demo.png"/>
+<img src="Documentation~/HierarchyOutliner_Rules.png" height="300"/>
+</details>
 
-### 🟡 GD Window
+<details id="gd-window">
+<summary>🟡 GD Window</summary>
 Window in which all assets labeled with 'GD' are displayed. Allowing easy access to all the ScriptableObjects a Game Designer would want to edit. 
 
 Clicking on one of the button in the window shows the asset in the inspector.
 
-![GD Window Example](Documentation/GDWindow_Window.png)
+![GD Window Example](Documentation~/GDWindow_Window.png)
 
 #### Labeled Asset Example
-![Asset Labeled to be visible in GD Window example](Documentation/GDWindow_LabeledAssetExample.png)
+![Asset Labeled to be visible in GD Window example](Documentation~/GDWindow_LabeledAssetExample.png)
+</details>
 
-
-### 🟡 Data Editor Window
+<details id="data-editor-window">
+<summary>🟡 Data Editor Window</summary>
 Editor Window able to query all ScriptableObjects of given types in the project to edit game's data more easily.
 It is also able to delete and add ScriptableObjects of the same given types.
 
 The types of ScriptableObjects to show and the path where to create new instances are easily editable in another EditorWindow openable from the 'Config' button in the DataEditorWindow.
 
-![Imgur](https://imgur.com/0c0cdTX.png)
-![Imgur](https://imgur.com/1atLGQA.png)
+<img src="Documentation~/DataEditorWindow_Demo.png" height="300px">
+<img src="Documentation~/DataEditorWindow_DemoConfig.png" height="200px">
+</details>
 
-### 🟡 Toolbar Buttons
+<details id="toolbar-buttons">
+<summary>🟡 Toolbar Buttons</summary>
 Thanks to [Unity Toolbar Extender](https://github.com/marijnz/unity-toolbar-extender), we can easily add labels and buttons in the Unity toolbar. 
 This package adds automatically one button for each scene in the build settings so you can switch of scene easily. 
+</details>
 
-### 🟡 SerializeReference ContextualMenu
+<details id="serializereference-contextualmenu">
+<summary>🟡 SerializeReference ContextualMenu</summary>
 Using SerializeReference fields we can Serialize in the Inspector an abstract class.
 But we need more stuff to just create an instance of a concrete class and assign it to the property.
 
 This package contains the ability to recognize SerializeReference fields and to give you the power to 
 set the concrete type of the field instance by right clicking on it
 
-![SerializeReference ContextualMenu Image](Documentation/SerializeReference_ContextualMenu.gif)
+![SerializeReference ContextualMenu Image](Documentation~/SerializeReference_ContextualMenu.gif)
+</details>
 
 ---
 ## 🟠 PRE-MADE SCRIPTS
