@@ -2,7 +2,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace OutfoxeedTools.Editor.DataEditorWindow
+namespace OutfoxeedTools.Editor
 {
     public class DataEditorItemInfos<T> where T : ScriptableObject
     {

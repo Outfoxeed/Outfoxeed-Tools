@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityToolbarExtender;
 
-namespace OutfoxeedTools.Editor.GDWindow
+namespace OutfoxeedTools.Editor
 {
     [InitializeOnLoad]
     public class GDWindowToolbarButton

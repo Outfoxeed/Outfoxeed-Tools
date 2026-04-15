@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace OutfoxeedTools.CustomHierarchy
+namespace OutfoxeedTools
 {
     [Serializable]
     public class HierarchySkin

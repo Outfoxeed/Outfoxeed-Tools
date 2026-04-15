@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace OutfoxeedTools.CustomHierarchy
+namespace OutfoxeedTools
 {
     [CreateAssetMenu(fileName = "Custom Hierarchy Parameters", menuName = "Hierarchy Parameters", order = 0)]
     public class HierarchyRulesSO : ScriptableObject

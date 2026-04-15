@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace OutfoxeedTools.Attributes
+namespace OutfoxeedTools
 {
     public class ReadOnlyAttribute : PropertyAttribute
     {

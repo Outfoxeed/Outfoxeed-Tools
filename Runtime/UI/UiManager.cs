@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
-using OutfoxeedTools.Attributes;
 using UnityEngine;
 
-namespace OutfoxeedTools.UI
+namespace OutfoxeedTools
 {
     public class UiManager : MonoBehaviour
     {

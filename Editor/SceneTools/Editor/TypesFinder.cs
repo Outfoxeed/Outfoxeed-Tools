@@ -1,7 +1,6 @@
 using System.Collections.Generic;
-using OutfoxeedTools.Editor;
 
-namespace OutfoxeedTools.SceneTools.Editor
+namespace OutfoxeedTools.Editor
 {
     public static class TypesFinder
     {

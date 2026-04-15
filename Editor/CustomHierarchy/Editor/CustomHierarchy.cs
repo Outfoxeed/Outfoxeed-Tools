@@ -1,7 +1,7 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
-namespace OutfoxeedTools.CustomHierarchy.Editor
+namespace OutfoxeedTools.Editor
 {
     [InitializeOnLoad]
     public static class CustomHierarchy

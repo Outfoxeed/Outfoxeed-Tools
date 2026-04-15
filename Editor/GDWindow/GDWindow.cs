@@ -3,7 +3,7 @@ using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
-namespace OutfoxeedTools.Editor.GDWindow
+namespace OutfoxeedTools.Editor
 {
     public class GDWindow : EditorWindow
     {

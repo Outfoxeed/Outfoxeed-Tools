@@ -1,8 +1,7 @@
-﻿using OutfoxeedTools.Editor.EditorHelpers;
-using UnityEditor;
+﻿using UnityEditor;
 using UnityEngine;
 
-namespace OutfoxeedTools.Attributes.Editor
+namespace OutfoxeedTools.Editor
 {
     [CustomPropertyDrawer(typeof(DisplayTypeAttribute))]
     public class DisplayTypeAttributePropertyDrawer : UnityEditor.PropertyDrawer

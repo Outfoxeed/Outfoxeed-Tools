@@ -1,4 +1,4 @@
-﻿namespace OutfoxeedTools.UI.UiMenus
+﻿namespace OutfoxeedTools
 {
     public class PauseMenuBase : UiMenu
     {

@@ -1,10 +1,9 @@
 ﻿using System;
-using OutfoxeedTools.Editor;
 using UnityEditor;
 using UnityEngine;
 
 // ReSharper disable once CheckNamespace
-namespace OutfoxeedTools.Editor.DataEditorWindow
+namespace OutfoxeedTools.Editor
 {
     [System.Serializable]
     public partial struct DataEditorConfig

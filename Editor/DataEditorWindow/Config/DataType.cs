@@ -1,4 +1,4 @@
-﻿namespace OutfoxeedTools.Editor.DataEditorWindow
+﻿namespace OutfoxeedTools.Editor
 {
     public partial struct DataEditorConfig
     {

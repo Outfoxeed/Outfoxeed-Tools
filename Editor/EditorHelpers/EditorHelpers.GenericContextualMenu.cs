@@ -2,7 +2,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace OutfoxeedTools.Editor.EditorHelpers
+namespace OutfoxeedTools.Editor
 {
     public static partial class EditorHelpers
     {

@@ -1,9 +1,8 @@
 using System;
-using OutfoxeedTools.Editor;
 using UnityEditor;
 using UnityEngine;
 
-namespace OutfoxeedTools.SceneTools.Editor
+namespace OutfoxeedTools.Editor
 {
     public class SceneToolsWindow : EditorWindow
     {

@@ -1,9 +1,8 @@
-﻿using OutfoxeedTools.Editor;
-using UnityEditor;
+﻿using UnityEditor;
 using UnityEngine;
 
 // ReSharper disable once CheckNamespace
-namespace OutfoxeedTools.Editor.DataEditorWindow
+namespace OutfoxeedTools.Editor
 {
     public class DataEditorConfigWindow : EditorWindow
     {

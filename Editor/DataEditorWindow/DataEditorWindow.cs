@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using OutfoxeedTools.Editor;
 using UnityEditor;
 using UnityEditor.Callbacks;
 using UnityEngine;
 
-namespace OutfoxeedTools.Editor.DataEditorWindow
+namespace OutfoxeedTools.Editor
 {
     [ExecuteInEditMode]
     public class DataEditorWindow : EditorWindow, IHasCustomMenu

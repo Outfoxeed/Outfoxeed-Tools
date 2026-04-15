@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-namespace OutfoxeedTools.MeshTools.Editor
+namespace OutfoxeedTools.Editor
 {
     public static class MeshUtility
     {

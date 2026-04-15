@@ -1,7 +1,7 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
-namespace OutfoxeedTools.Attributes.Editor
+namespace OutfoxeedTools.Editor
 {
     [CustomPropertyDrawer(typeof(LabelAttribute))]
     public class LabelAttributePropertyDrawer : UnityEditor.PropertyDrawer
