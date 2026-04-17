@@ -34,7 +34,6 @@ RectTransform:
   - {fileID: 8573587096452292181}
   - {fileID: 8573587097301360886}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -62,7 +61,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.392}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -91,7 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f602e96fcdc44132a9565dfabc6c3ccd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FirstSelected: {fileID: 8573587096775881710}
+  _firstSelected: {fileID: 8573587096775881710}
 --- !u!1 &8573587096452292186
 GameObject:
   m_ObjectHideFlags: 0
@@ -123,7 +122,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8573587096247694142}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -196,20 +194,23 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_TextWrappingMode: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
+  m_EmojiFallbackSupport: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
@@ -260,7 +261,6 @@ RectTransform:
   - {fileID: 1965642248492480901}
   - {fileID: 1965642248467086651}
   m_Father: {fileID: 8573587096247694142}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
@@ -298,6 +298,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8573587097301360886}
     m_Modifications:
     - target: {fileID: 7907438310838288147, guid: b4ddd7f7f11b0624c98d7dbbe97391ab, type: 3}
@@ -390,7 +391,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7907438310838288149, guid: b4ddd7f7f11b0624c98d7dbbe97391ab, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7907438310838288149, guid: b4ddd7f7f11b0624c98d7dbbe97391ab, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -418,7 +419,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7907438310838288149, guid: b4ddd7f7f11b0624c98d7dbbe97391ab, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ResumeGameButton
+      value: OnResumeGameButtonClicked
       objectReference: {fileID: 0}
     - target: {fileID: 7907438310838288149, guid: b4ddd7f7f11b0624c98d7dbbe97391ab, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -426,7 +427,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7907438310838288149, guid: b4ddd7f7f11b0624c98d7dbbe97391ab, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: OutFoxeed.UI.UiMenus.PauseMenu, Assembly-CSharp
+      value: OutfoxeedTools.PauseScreenBase, OutfoxeedTools.Runtime
       objectReference: {fileID: 0}
     - target: {fileID: 7907438310838288149, guid: b4ddd7f7f11b0624c98d7dbbe97391ab, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -456,7 +457,14 @@ PrefabInstance:
       propertyPath: m_enableAutoSizing
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7907438311433200003, guid: b4ddd7f7f11b0624c98d7dbbe97391ab, type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4ddd7f7f11b0624c98d7dbbe97391ab, type: 3}
 --- !u!224 &8573587096775881705 stripped
 RectTransform:
@@ -473,6 +481,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8573587097301360886}
     m_Modifications:
     - target: {fileID: 7907438310838288147, guid: b4ddd7f7f11b0624c98d7dbbe97391ab, type: 3}
@@ -599,7 +608,14 @@ PrefabInstance:
       propertyPath: m_fontSize
       value: 52.85
       objectReference: {fileID: 0}
+    - target: {fileID: 7907438311433200003, guid: b4ddd7f7f11b0624c98d7dbbe97391ab, type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4ddd7f7f11b0624c98d7dbbe97391ab, type: 3}
 --- !u!224 &1965642248467086651 stripped
 RectTransform:
@@ -611,6 +627,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 8573587097301360886}
     m_Modifications:
     - target: {fileID: 7907438310838288147, guid: b4ddd7f7f11b0624c98d7dbbe97391ab, type: 3}
@@ -719,11 +736,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7907438310838288149, guid: b4ddd7f7f11b0624c98d7dbbe97391ab, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OpenUiOfType
+      value: SwitchScreen
       objectReference: {fileID: 0}
     - target: {fileID: 7907438310838288149, guid: b4ddd7f7f11b0624c98d7dbbe97391ab, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: OutFoxeed.UI.UiMenu, Assembly-CSharp
+      value: OutfoxeedTools.PauseScreenBase, OutfoxeedTools.Runtime
       objectReference: {fileID: 0}
     - target: {fileID: 7907438310838288149, guid: b4ddd7f7f11b0624c98d7dbbe97391ab, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
@@ -737,7 +754,14 @@ PrefabInstance:
       propertyPath: m_text
       value: Options
       objectReference: {fileID: 0}
+    - target: {fileID: 7907438311433200003, guid: b4ddd7f7f11b0624c98d7dbbe97391ab, type: 3}
+      propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
+      value: 1801810542
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4ddd7f7f11b0624c98d7dbbe97391ab, type: 3}
 --- !u!224 &1965642248492480901 stripped
 RectTransform:

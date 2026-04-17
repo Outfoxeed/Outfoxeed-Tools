@@ -1,0 +1,38 @@
+﻿namespace OutfoxeedTools
+{
+    public enum ScreenType
+    {
+        Gameplay = 0,
+        Pause = 1,
+        GameWon = 2,
+        GameOver = 3,
+        MainMenu = 4,
+        Options = 5,
+        Credits = 6,
+        GameModeSelection = 7,
+        LevelSelection = 8,
+        Available9 = 9,
+        Available10 = 10,
+        Available11 = 11,
+        Available12 = 12,
+        Available13 = 13,
+        Available14 = 14,
+        Available15 = 15,
+        AlphaAlpha,
+        AlphaBeta,
+        AlphaCharlie,
+        AlphaDelta,
+        BetaAlpha,
+        BetaBeta,
+        BetaCharlie,
+        BetaDelta,
+        CharlieAlpha,
+        CharlieBeta,
+        CharlieCharlie,
+        CharlieDelta,
+        DeltaAlpha,
+        DeltaBeta,
+        DeltaCharlie,
+        DeltaDelta,
+    }
+}

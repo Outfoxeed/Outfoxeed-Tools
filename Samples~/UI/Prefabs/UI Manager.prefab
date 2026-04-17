@@ -35,7 +35,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -51,22 +50,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 7501236477338356802}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 087d5f2c52fe49a1853efbb2abb444f0, type: 3}
+  m_Script: {fileID: 11500000, guid: 34dd830d8aa28e4488e344240ef7514e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiInfos:
-  - type: 1
-    prefab: {fileID: 8573587096247694139, guid: 5e2f3a8c9bef2b2478ddeedf26822c69, type: 3}
-  - type: 2
-    prefab: {fileID: 654442106468267021, guid: de8faf9fcea84e244a308b2132b92950, type: 3}
-  - type: 3
-    prefab: {fileID: 8573587096247694139, guid: a5b2126ffbbcd154486359fda4039254, type: 3}
-  - type: 4
-    prefab: {fileID: 1068431935784896985, guid: 8b6a957a426667a4cbe532861cfddb4f, type: 3}
-  eventSystem: {fileID: 0}
-  currentUiType: 0
-  lastUiType: 0
-  currentUI: {fileID: 0}
+  _startScreenType: 0
+  _screenMappings:
+  - <Type>k__BackingField: 0
+    <ScreenPrefab>k__BackingField: {fileID: 0}
+  - <Type>k__BackingField: 0
+    <ScreenPrefab>k__BackingField: {fileID: 0}
+  _eventSystem: {fileID: 7501236477338356804}
+  _currentScreen: {fileID: 0}
+  _currentScreenType: 0
+  _lastScreenType: 0
 --- !u!223 &7501236477338356807
 Canvas:
   m_ObjectHideFlags: 0
@@ -84,7 +80,9 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -155,6 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit

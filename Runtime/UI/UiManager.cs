@@ -1,112 +1,95 @@
-﻿using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace OutfoxeedTools
 {
-    public class UiManager : MonoBehaviour
+    public class UIManager : MonoBehaviour
     {
-        [SerializeField] private UiInfo[] uiInfos;
+        [Header("Config")]
+        [SerializeField] private ScreenType _startScreenType;
+        [SerializeField] private ScreenMapping[] _screenMappings;
 
-        [SerializeField] private UnityEngine.EventSystems.EventSystem eventSystem;
-        public UnityEngine.EventSystems.EventSystem EventSystem
+        [Header("Components")]
+        [SerializeField] private EventSystem _eventSystem;
+        public EventSystem EventSystem
         {
             get
             {
-                if (eventSystem == null)
-                    eventSystem = FindObjectOfType<UnityEngine.EventSystems.EventSystem>();
-                return eventSystem;
+                if (_eventSystem) _eventSystem = FindFirstObjectByType<EventSystem>();
+                return _eventSystem;
             }
         }
-
-        [SerializeField] private UiType startUiType;
-        private Dictionary<UiType, UiMenu> uiPrefabs;
-
-        public enum UiType
-        {
-            None,
-            Game,
-            MainMenu,
-            Pause,
-            Options,
-            LooseScreen,
-            VictoryScreen,
-        };
-
-        [SerializeField, ReadOnly] private UiType currentUiType;
-        [SerializeField, ReadOnly] private UiType lastUiType;
-        [SerializeField, ReadOnly] private UiMenu currentUI;
+        
+        [Header("Debug")]
+        [SerializeField, ReadOnly] private ScreenBase _currentScreen;
+        [SerializeField, ReadOnly] private ScreenType _currentScreenType;
+        [SerializeField, ReadOnly] private ScreenType _lastScreenType;
 
         private void Awake()
         {
-            // Init prefabs dictionnary
-            uiPrefabs = new Dictionary<UiType, UiMenu>();
-            for (int i = 0; i < uiInfos.Length; i++)
-            {
-                UiInfo uiInfo = uiInfos[i];
-                uiPrefabs.Add(uiInfo.type, uiInfo.prefab);
-            }
-
-            OpenUiOfType(startUiType);
+            SwitchToScreen(_startScreenType);
         }
 
-        public void OpenUiOfType(UiType type)
+        public void SwitchToScreen(ScreenType screenType)
         {
-            if (type == currentUiType)
+            if (screenType == _currentScreenType)
                 return;
 
             // Destroy current UI if needed
-            if (currentUI != null)
+            if (_currentScreen != null)
             {
-                Destroy(currentUI.gameObject);
-                currentUI = null;
+                Destroy(_currentScreen.gameObject);
+                _currentScreen = null;
             }
             
             // Instantiate the new UI
-            if (uiPrefabs.TryGetValue(type, out UiMenu menuPrefab))
+            if (TryGetScreenPrefab(screenType, out ScreenBase menuPrefab))
             {
-                currentUI = Instantiate(menuPrefab, transform);
-                currentUI.Init(this);
+                _currentScreen = Instantiate(menuPrefab, transform);
+                _currentScreen.Init(this);
             }
             
             // Update vars
-            lastUiType = currentUiType;
-            currentUiType = type;
+            _lastScreenType = _currentScreenType;
+            _currentScreenType = screenType;
         }
 
-        public void LeaveCurrentUiMenu()
+        public void HandleBack()
         {
-            if (currentUI == null)
-                return;
+            SwitchToScreen(GetBackRedirection(_currentScreenType));
+            // TODO: unpause game if was in pause screen
+        }
 
-            switch (currentUiType)
+        protected virtual ScreenType GetBackRedirection(ScreenType currentScreenType)
+        {
+            return currentScreenType switch
             {
-                case UiType.Pause:
-                    OpenUiOfType(UiType.Game);
-                    break;
-                case UiType.Options:
-                    OpenUiOfType(lastUiType);
-                    break;
-                default:
-                    break;
+                ScreenType.Pause => ScreenType.Gameplay,
+                _ => _lastScreenType
+            };
+        }
+
+        private bool TryGetScreenPrefab(ScreenType screenType, out ScreenBase screenPrefab)
+        {
+            foreach (ScreenMapping screenMapping in _screenMappings)
+            {
+                if (screenMapping.Type.CompareTo(screenType) == 0)
+                {
+                    screenPrefab = screenMapping.ScreenPrefab;
+                    return true;
+                }
             }
+
+            screenPrefab = null;
+            return false;
         }
-
-        public void ExitAllUi()
+        
+        [Serializable]
+        public struct ScreenMapping
         {
-            if (currentUI == null || currentUiType == UiType.Game)
-                return;
-            Destroy(currentUI.gameObject);
-            currentUI = null;
-
-            lastUiType = currentUiType;
-            currentUiType = UiType.Game;
-        }
-
-        [System.Serializable]
-        public struct UiInfo
-        {
-            public UiType type;
-            public UiMenu prefab;
+            [field: SerializeField] public ScreenType Type { get; private set; }
+            [field: SerializeField] public ScreenBase ScreenPrefab { get; private set; }
         }
     }
 }
